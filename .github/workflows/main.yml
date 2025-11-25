@@ -9,7 +9,7 @@ on:
     - '**/CMakeLists.txt'
     - '.github/workflows/**'
     - '.gitmodules'
-    - 'src/c_src/stduuid'
+    - 'src/cpp_src/stduuid'
   pull_request:
     paths:
     - '**.c'
@@ -17,7 +17,7 @@ on:
     - '**/CMakeLists.txt'
     - '.github/workflows/**'
     - '.gitmodules'
-    - 'src/c_src/stduuid'
+    - 'src/cpp_src/stduuid'
     
 jobs:
   freebsd:

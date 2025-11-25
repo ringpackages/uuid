@@ -1,3 +1,3 @@
-[submodule "src/c_src/stduuid"]
-	path = src/c_src/stduuid
+[submodule "src/cpp_src/stduuid"]
+	path = src/cpp_src/stduuid
 	url = https://github.com/mariusbancila/stduuid

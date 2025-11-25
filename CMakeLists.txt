@@ -84,7 +84,7 @@ set(UUID_BUILD_TESTS OFF CACHE BOOL "Do not build stduuid tests")
 set(UUID_BUILD_SHARED OFF CACHE BOOL "Build stduuid as a static library")
 
 # Add jansson as a subdirectory to build it
-if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/c_src/stduuid/CMakeLists.txt")
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/cpp_src/stduuid/CMakeLists.txt")
     message(STATUS "stduuid source not found, fetching from GitHub...")
     FetchContent_Declare(
         stduuid
@@ -97,12 +97,12 @@ else()
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
     set(CMAKE_CXX_EXTENSIONS OFF)
-    add_subdirectory(src/c_src/stduuid)
+    add_subdirectory(src/cpp_src/stduuid)
 endif()
 
 # Create the Ring UUID extension shared library
 add_library(ring_uuid SHARED
-	${CMAKE_CURRENT_SOURCE_DIR}/src/c_src/ring_uuid.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/src/cpp_src/ring_uuid.cpp
 )
 
 # Include directories

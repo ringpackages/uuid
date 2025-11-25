@@ -34,7 +34,7 @@ aPackageInfo = [
 		"main.ring",
 		"package.ring",
 		"README.md",
-		"src/c_src/ring_uuid.cpp",
+		"src/cpp_src/ring_uuid.cpp",
 		"src/uuid.ring",
 		"src/uuid_test.ring",
 		"src/utils/color.ring",
